@@ -67,9 +67,10 @@
 После выполнения сборки, в блоке <code>История сборок</code> напротив номера сборки появятся значки <code>Allure Report</code>, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
 
 <p align="center">
-<img title="Allure-report" src="images/screens/allure-report_1.jpg"><br>
-<img title="Allure-suites" src="images/screens/allure-report_suits.jpg"><br>
-<img title="Allure-graph" src="images/screens/allure-report_graph.jpg"><br>
+<img title="Allure-report" src="images/screens/allure-report_1.jpg">
+<img title="Allure-graph" src="images/screens/allure-report_suits.jpg"><br>
+<img title="Allure-suites" src="images/screens/allure-report_graphs.jpg"><br>
+
 </p>
 
 ---
