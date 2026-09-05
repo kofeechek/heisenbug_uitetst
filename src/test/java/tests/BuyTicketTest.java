@@ -14,7 +14,7 @@ public class BuyTicketTest extends TestBase {
 
     @Test
     @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Проверка страницы расписания")
+    @DisplayName("Проверка покупки билета Custom")
     void customBuyTicketFormTest() {
         mainPage.openPage()
                 .clickBuyButton()
