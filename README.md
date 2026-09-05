@@ -54,7 +54,7 @@
 - Регитрация пользователя, новый пользователь
 
 
-##  <img width="40" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg">  Сборка в Jenkins
+##  <img width="40" style="vertical-align:middle" title="Jenkins" src="images/logo/Jenkins.svg">  [Сборка в Jenkins](https://jenkins.qa.guru/job/hw_14_heisenbug/)
 
 Для запуска сборки необходимо перейти в раздел <code>Buld with Parametrs</code>, выбрать параметры экрана, браузер и нажать кнопку <code>Build</code>.
 <p align="center">
@@ -62,7 +62,7 @@
 </p>
 
 ---
-## <img width="40" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure.svg"> Мониторинг и отчетность
+## <img width="40" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure.svg"> [Allure - интерактивные отчеты](https://jenkins.qa.guru/job/hw_14_heisenbug/46/allure/)
 
 После выполнения сборки, в блоке <code>История сборок</code> напротив номера сборки появятся значки <code>Allure Report</code>, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
 
@@ -75,7 +75,7 @@
 ---
 
 
-## <img width="40" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure_TO.svg"> Система управления тест-кейсами TestOps
+## <img width="40" style="vertical-align:middle" title="Allure Report" src="images/logo/Allure_TO.svg"> Система управления тест-кейсами [TestOps](https://allure.qa.guru/launch/56270)
 
 В TestOps отображаются тест-кейсы, а также запуски со статусом выполнения в реальном времени. Статистика выполнения кейсов отображается на дашбордах, есть возможность настройки кастомных графиков.
 
