@@ -32,7 +32,7 @@ public class TestBase {
     static void setUp() {
 
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
+        Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.headless = Boolean.parseBoolean(System.getProperty("headless", "true"));
         Configuration.browserSize = System.getProperty("browserResolution", "1920x1080");
         Configuration.baseUrl = System.getProperty("baseUrl", "https://heisenbug.ru");
