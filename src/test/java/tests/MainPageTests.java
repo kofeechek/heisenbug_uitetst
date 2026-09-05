@@ -1,7 +1,6 @@
 package tests;
 
 import io.qameta.allure.*;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -22,14 +21,6 @@ public class MainPageTests extends TestBase {
                 .chooseTicketModalWindowCheck(testData.chooseTicketTitle);
     }
 
-    @Test
-    @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Проверка кнопки 'Получать апдейты'")
-    void updatesReceiveButtonTest() {
-        mainPage.openPage()
-                .clickGetUpdatesButton()
-                .getUpdatesModalWindowCheck(testData.getUpdatesByEmailTitle);
-    }
 
     @Test
     @Severity(SeverityLevel.BLOCKER)

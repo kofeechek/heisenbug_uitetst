@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class RegistrationPage {
 
+
     private SelenideElement emailInput = $("#registration-email");
     private SelenideElement createButton = $x("//button[@jctestingmaker='actionTarget' and @aria-label='Создать']");
     private SelenideElement approveEmailMessage = $x("//h2[contains(normalize-space(), 'Подтвердите email')]");

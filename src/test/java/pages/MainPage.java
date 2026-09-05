@@ -14,7 +14,6 @@ public class MainPage {
     private SelenideElement timeTableButton = $("nav a[href='/schedule/table/']");
     private SelenideElement chooseTicketTitle = $x("//*[contains(text(), 'Выбрать билет')]");
     private SelenideElement getUpdatesButton = $("#subscription-home-banner-submit");
-    private SelenideElement getUpdatesByEmailTitle = $x("//h3[contains(., 'email')]");
     private SelenideElement toBeAPartnerLink = $x("//button[contains(., 'Оставить запрос')]");
     private SelenideElement toBeAPartnerTitle = $x("//h2[contains(., 'Стать партнером')]");
     private SelenideElement languageSwitcher = $("a[href='/en/']");
@@ -70,12 +69,6 @@ public class MainPage {
         return this;
     }
 
-    @Step("Проверяем заголовок подписки на email")
-    public MainPage getUpdatesModalWindowCheck(String value) {
-        getUpdatesByEmailTitle.shouldHave(text(value));
-
-        return this;
-    }
 
     @Step("Кликаем по кнопке 'Оставить запрос' в блоке партнерства")
     public MainPage clickToBeAPartnerLink() {

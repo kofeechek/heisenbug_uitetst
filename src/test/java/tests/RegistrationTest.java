@@ -1,40 +1,39 @@
 package tests;
 
-import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.conditions.Visible;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import tests.testdata.TestData;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class RegistrationTest extends TestBase {
 
-    @Test
+    @ValueSource(strings = {
+            "lowercase@mail.ru", "111@ya.ru", "UPPERCASE@GMAIL.COM"
+    })
+    @ParameterizedTest
     @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Проверка успешной регистрации пользователя")
-    void customBuyTicketFormPositiveTest() {
+    @DisplayName("Проверка успешной регистрации пользователя c заполнением {0}")
+    void customBuyTicketFormPositiveTest(String successEmail) {
         mainPage.openPage()
                 .clickAuthorizationButton();
         loginPage.clickRegistrationTab();
-        registrationPage.typeEmail(testData.email)
+        registrationPage.typeEmail(successEmail)
                 .clickCreateButton()
                 .approveEmailMessageCheck(testData.successRegistrationMessage);
     }
 
-    @Test
+    @ValueSource(strings = {
+            "lowercase", "111", "UPPERCASE"
+    })
+    @ParameterizedTest
     @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Проверка неуспешной регистрации пользователя - некорректный email")
-    void customBuyTicketFormNegativeTest() {
+    @DisplayName("Проверка неуспешной регистрации пользователя - некорректный email, c заполнением {0}")
+    void customBuyTicketFormNegativeTest(String wrongEmail) {
         mainPage.openPage()
                 .clickAuthorizationButton();
         loginPage.clickRegistrationTab();
-        registrationPage.typeEmail(testData.wrongEmail)
+        registrationPage.typeEmail(wrongEmail)
                 .clickCreateButton()
                 .wrongEmailMessageCheck(testData.wrongEmailMessage);
     }

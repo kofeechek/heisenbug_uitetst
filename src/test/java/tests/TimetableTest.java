@@ -1,16 +1,9 @@
 package tests;
 
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @Feature("Heisenbug Issue")
 @Story("Страница расписания Heisenbug")
@@ -27,4 +20,15 @@ public class TimetableTest extends TestBase {
                 .clickTimetableButton();
         timeteblePage.openTimetablePageCheck(testData.timetableTitle);
     }
+
+    @Test
+    @Severity(SeverityLevel.CRITICAL)
+    @DisplayName("Проверка кнопки 'Получать апдейты'")
+    void updatesReceiveButtonTest() {
+        mainPage.openPage()
+                .clickTimetableButton();
+        timeteblePage.getUpdatesButtonClick()
+                .getUpdatesModalWindowCheck(testData.getUpdatesByEmailTitle);
+    }
+
 }
